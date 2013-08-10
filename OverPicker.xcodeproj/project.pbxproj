@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C751C6CB17A0AAEA000B119B /* PhotoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C751C6CA17A0AAEA000B119B /* PhotoCell.m */; };
 		C78FA406179CCEA30085554B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C78FA405179CCEA30085554B /* UIKit.framework */; };
 		C78FA408179CCEA30085554B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C78FA407179CCEA30085554B /* Foundation.framework */; };
 		C78FA40A179CCEA30085554B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C78FA409179CCEA30085554B /* CoreGraphics.framework */; };
@@ -18,9 +19,12 @@
 		C78FA41C179CCEA30085554B /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C78FA41B179CCEA30085554B /* Default-568h@2x.png */; };
 		C78FA41F179CCEA30085554B /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C78FA41D179CCEA30085554B /* MainStoryboard.storyboard */; };
 		C78FA422179CCEA30085554B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C78FA421179CCEA30085554B /* ViewController.m */; };
+		C78FA429179CD72A0085554B /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C78FA428179CD72A0085554B /* AssetsLibrary.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C751C6C917A0AAEA000B119B /* PhotoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoCell.h; sourceTree = "<group>"; };
+		C751C6CA17A0AAEA000B119B /* PhotoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoCell.m; sourceTree = "<group>"; };
 		C78FA402179CCEA30085554B /* OverPicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OverPicker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C78FA405179CCEA30085554B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C78FA407179CCEA30085554B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -37,6 +41,7 @@
 		C78FA41E179CCEA30085554B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		C78FA420179CCEA30085554B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		C78FA421179CCEA30085554B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		C78FA428179CD72A0085554B /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C78FA429179CD72A0085554B /* AssetsLibrary.framework in Frameworks */,
 				C78FA406179CCEA30085554B /* UIKit.framework in Frameworks */,
 				C78FA408179CCEA30085554B /* Foundation.framework in Frameworks */,
 				C78FA40A179CCEA30085554B /* CoreGraphics.framework in Frameworks */,
@@ -56,6 +62,7 @@
 		C78FA3F9179CCEA30085554B = {
 			isa = PBXGroup;
 			children = (
+				C78FA428179CD72A0085554B /* AssetsLibrary.framework */,
 				C78FA40B179CCEA30085554B /* OverPicker */,
 				C78FA404179CCEA30085554B /* Frameworks */,
 				C78FA403179CCEA30085554B /* Products */,
@@ -88,6 +95,8 @@
 				C78FA41D179CCEA30085554B /* MainStoryboard.storyboard */,
 				C78FA420179CCEA30085554B /* ViewController.h */,
 				C78FA421179CCEA30085554B /* ViewController.m */,
+				C751C6C917A0AAEA000B119B /* PhotoCell.h */,
+				C751C6CA17A0AAEA000B119B /* PhotoCell.m */,
 				C78FA40C179CCEA30085554B /* Supporting Files */,
 			);
 			path = OverPicker;
@@ -176,6 +185,7 @@
 				C78FA412179CCEA30085554B /* main.m in Sources */,
 				C78FA416179CCEA30085554B /* AppDelegate.m in Sources */,
 				C78FA422179CCEA30085554B /* ViewController.m in Sources */,
+				C751C6CB17A0AAEA000B119B /* PhotoCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,6 +308,7 @@
 				C78FA427179CCEA30085554B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

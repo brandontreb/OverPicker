@@ -1,23 +1,150 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2519" systemVersion="12A206j" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1856"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
     <scenes>
-        <!--class Prefix:identifier View Controller-->
+        <!--View Controller-->
         <scene sceneID="5">
             <objects>
                 <viewController id="2" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3">
-                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="x9o-VS-o0k">
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="0Ad-Wb-w7H">
+                                    <size key="itemSize" width="104" height="104"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PhotoCell" id="mi1-w9-7CJ" customClass="PhotoCell">
+                                        <rect key="frame" x="0.0" y="0.0" width="104" height="104"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="104" height="104"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2rU-Bd-Ncq"/>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="2rU-Bd-Ncq" firstAttribute="leading" secondItem="mi1-w9-7CJ" secondAttribute="leading" type="default" id="B8P-5G-b3C"/>
+                                            <constraint firstItem="2rU-Bd-Ncq" firstAttribute="trailing" secondItem="mi1-w9-7CJ" secondAttribute="trailing" type="default" id="WbJ-u8-eD9"/>
+                                            <constraint firstItem="2rU-Bd-Ncq" firstAttribute="top" secondItem="mi1-w9-7CJ" secondAttribute="top" type="default" id="aSN-re-kjX"/>
+                                            <constraint firstItem="2rU-Bd-Ncq" firstAttribute="bottom" secondItem="mi1-w9-7CJ" secondAttribute="bottom" type="default" id="qZS-Nu-AyM"/>
+                                        </constraints>
+                                        <size key="customSize" width="104" height="104"/>
+                                        <connections>
+                                            <outlet property="photoImageView" destination="2rU-Bd-Ncq" id="krJ-gJ-6tP"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="2" id="3Rs-Pa-fUh"/>
+                                    <outlet property="delegate" destination="2" id="d56-H2-hUO"/>
+                                </connections>
+                            </collectionView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3IL-xc-RYZ">
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Cm-SD-RKc">
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="160" id="eY3-Jz-bia"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBlack" family="Helvetica Neue" pointSize="20"/>
+                                        <state key="normal" title="Take Photo">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="takePhotoButtonTapped:" destination="2" eventType="touchUpInside" id="3ya-0s-lJb"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e2a-Ha-ZRD">
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="160" id="4nZ-cu-5lQ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBlack" family="Helvetica Neue" pointSize="20"/>
+                                        <state key="normal" title="Albums">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="albumsButtonTapped:" destination="2" eventType="touchUpInside" id="Ubo-r3-xdK"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.80000000000000004" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="e2a-Ha-ZRD" firstAttribute="leading" secondItem="3IL-xc-RYZ" secondAttribute="leading" constant="159" id="1UV-Vt-gbB"/>
+                                    <constraint firstItem="0Cm-SD-RKc" firstAttribute="bottom" secondItem="3IL-xc-RYZ" secondAttribute="bottom" type="default" id="4zX-el-wzJ"/>
+                                    <constraint firstItem="0Cm-SD-RKc" firstAttribute="leading" secondItem="3IL-xc-RYZ" secondAttribute="leading" type="default" id="7UA-Z2-4AE"/>
+                                    <constraint firstItem="0Cm-SD-RKc" firstAttribute="top" secondItem="3IL-xc-RYZ" secondAttribute="top" type="default" id="DEX-ww-Lkn"/>
+                                    <constraint firstItem="e2a-Ha-ZRD" firstAttribute="top" secondItem="3IL-xc-RYZ" secondAttribute="top" type="default" id="KAn-Gs-7uR"/>
+                                    <constraint firstItem="e2a-Ha-ZRD" firstAttribute="bottom" secondItem="3IL-xc-RYZ" secondAttribute="bottom" type="default" id="qtO-FG-AhG"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="x9o-VS-o0k" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="5Cg-Yh-wob"/>
+                            <constraint firstAttribute="bottom" secondItem="3IL-xc-RYZ" secondAttribute="bottom" constant="18" id="AwP-Rw-P7z"/>
+                            <constraint firstItem="3IL-xc-RYZ" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="WJz-SV-5lg"/>
+                            <constraint firstItem="x9o-VS-o0k" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="cVc-OL-EmF"/>
+                            <constraint firstItem="x9o-VS-o0k" firstAttribute="bottom" secondItem="3" secondAttribute="bottom" type="default" id="l04-Rs-bzs"/>
+                            <constraint firstItem="3IL-xc-RYZ" firstAttribute="top" secondItem="3" secondAttribute="top" constant="460" id="sND-hJ-28K"/>
+                            <constraint firstItem="3IL-xc-RYZ" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="u1A-Ic-rCF"/>
+                            <constraint firstItem="x9o-VS-o0k" firstAttribute="top" secondItem="3" secondAttribute="top" type="default" id="zZv-N3-DVp"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="collectionView" destination="x9o-VS-o0k" id="Dvy-ro-b1f"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
     </scenes>
+    <classes>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="PhotoCell" superclassName="UICollectionViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/PhotoCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="photoImageView" candidateClass="UIImageView"/>
+            </relationships>
+        </class>
+        <class className="UICollectionReusableView" superclassName="UIView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionReusableView.h"/>
+        </class>
+        <class className="UICollectionViewCell" superclassName="UICollectionReusableView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewCell.h"/>
+        </class>
+        <class className="UICollectionViewFlowLayout" superclassName="UICollectionViewLayout">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewFlowLayout.h"/>
+        </class>
+        <class className="UICollectionViewLayout" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewLayout.h"/>
+        </class>
+        <class className="ViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="albumsButtonTapped:"/>
+                <relationship kind="action" name="takePhotoButtonTapped:"/>
+                <relationship kind="outlet" name="collectionView" candidateClass="UICollectionView"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
